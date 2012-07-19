@@ -1,0 +1,22 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '((".google.com"
+  [url-cookie "HttpOnly" nil "13-Jun-2012 21:59:38.00 GMT" "/" ".google.com" nil]
+  [url-cookie "NID" "54=SPT36XYlUFf-kcwS8Mk6mzXFrFQ6BN21_Qbou4pfTY8dff75qf-2pca80WfgdGDorujhzMjzVK0bItlx-5aOnPlYXXnN6uOz9dfe4PUfQEyRkaalIMXFZq1s_lLsZqy9" "13-Jun-2012 21:59:38.00 GMT" "/" ".google.com" nil]
+  [url-cookie "PREF" "ID=9d722d7c499f97f6:FF=0:TM=1323813578:LM=1323813578:S=Y-GChZXtiG_Kxbif" "12-Dec-2013 21:59:38.00 GMT" "/" ".google.com" nil]))
+)
+(setq url-cookie-secure-storage
+ '(("gist.github.com"
+  [url-cookie "HttpOnly" nil "01-Jan-2021 00:00:00.00 GMT" "/" "gist.github.com" t]
+  [url-cookie "_gh_sess" "BAh7BzoPc2Vzc2lvbl9pZCIlOTgzZDFkM2ZiYjI5NjJiYzMyZjA4NTZjZTI0MDJmY2MiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA%3D--98fcf4fd045bbe1e6b387cc40b26871614df7850" "01-Jan-2021 00:00:00.00 GMT" "/" "gist.github.com" t])
+ ("github.com"
+  [url-cookie "HttpOnly" nil "Fri, 01 Jan 2021 00:00:00 GMT" "/" "github.com" t]
+  [url-cookie "_gh_sess" "BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--ed7eadd474fd37850b68bd3c08a5c55ad0c3c833" "Fri, 01 Jan 2021 00:00:00 GMT" "/" "github.com" t]))
+)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

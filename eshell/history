@@ -1,0 +1,128 @@
+nosetests
+nosetests --help
+man nosetest
+man nosetests
+nosetests tests.com.spring.apps.social.test_social_service --tests=test_zero_friend_sync_completes
+cd ~/Documents/Source/
+ls
+cd vendor/
+ls
+git clone https://github.com/AFNetworking/AFNetworking.git
+cd AFNetworking/
+ls
+ls AFNetworking.xcworkspace/
+ls AFNetworking/
+cp -r AFNetworking ../../SpringTasks/SpringTasks/
+cd ..
+ls
+git clone https://github.com/johnezang/JSONKit.git
+cd JSONKit/
+ls
+cd ..
+cp -r JSONKit ../SpringTasks/SpringTasks/
+cd ../SpringTasks/SpringTasks/
+ls
+cd JSONKit/
+ls
+rm *.md
+ls
+curl -XGET http:springpadit.com/api/users/aykroyd
+curl -XGET http://springpadit.com/api/users/aykroyd
+cd ..
+ack "application/javascript"
+ack "application/json"
+cd ~/Documents/Source/springpad2/
+git pull
+git st
+git status
+git diff
+git checkout develop
+git stash
+git checkout develop
+git pull
+find-file src/main/python/com/spring/apps/sbr/dao.py
+bin/test 
+exit
+mv color-theme-blackboard.el color-theme-pete.el
+..
+ls
+mkdir personal
+mv vendor/color-theme-pete.el personal/
+find-file init.el 
+(spring-get "http://pete.springpadapp.com/api/users/me")
+(spring-get "/users/me")
+(setq spring-username pete)
+(setq spring-username "pete")
+(spring-get "/users/me")
+(spring-get "/users/me/blocks")
+(spring-get "/users/me/blocks?format=preview")
+(spring-get "/users/me/blocks?format=preview")
+(setq spring-username "jason")
+(spring-get "/users/me/blocks?format=preview")
+(setq spring-username "chow")
+(spring-get "/users/me/blocks?format=preview")
+(setq spring-username "chuck")
+(spring-get "/users/me/blocks?format=preview")
+(spring-get "/admin/setup-my-test")
+(spring-get "/users/me/blocks?format=preview")
+(setq spring-username "pete")
+(spring-get "/users/me/following")
+(spring-get "/users/me/following/users")
+(spring-get "/users/jason/following/users")
+(spring-get "/users/chuck/following/users")
+(spring-get "/users/chow/following/users")
+(spring-get "/admin/setup-my-test")
+(spring-get "/users/chow/following/users")
+(spring-get "/users/jason/following/users")
+(spring-get "/users/pete/following/users")
+(spring-get "/users/chuck/following/users")
+(spring-get "/users/chuck/following/users")
+ls
+cd vendor/
+ls
+git clone git://github.com/hayamiz/twittering-mode.git
+git clone https://github.com/jwiegley/eshell.git
+git clone https://github.com/djcb/sauron.git
+git clone https://github.com/liebke/avout.git
+brew install markdown
+brew
+cd /usr/local/bin/
+ls brew
+./brew
+brew
+brew install markdown
+markdown 
+cd -
+brew
+echo $PATH
+cd ../..
+cd Documents/Source/
+ls
+git clone git@github.com:springpartners/bluecass.git
+pwd
+ls
+cd vendor/
+ls
+git clone https://github.com/tinkerpop/blueprints.git
+cd ..
+ls
+cd bluecass/
+rm -rf ~/.m2/repository/com/springpad/bluecass/
+mvn deploy -DskipTests
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.6.0_29-b11-402.jdk/Contents/Home
+echo $JAVA_HOME
+mvn deploy -DskipTests
+rm -rf ~/.m2/repository/com/springpad/bluecass
+mvn deploy -DskipTests
+rm -rf ~/.m2/repository/com/springpad/bluecass
+mvn deploy -DskipTests
+rm -rf ~/.m2/repository/com/springpad/bluecass
+mvn deploy -DskipTests
+rm -rf ~/.m2/repository/com/springpad/bluecass
+mvn deploy -DskipTests
+rm -rf ~/.m2/repository/com/springpad/bluecass
+mvn deploy -DskipTests
+rm -rf ~/.m2/repository/com/springpad/bluecass
+mvn deploy -DskipTests
+rm -rf ~/.m2/repository/com/springpad/bluecass
+mvn deploy -DskipTests
