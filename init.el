@@ -24,6 +24,9 @@
 (setq ring-bell-function 'ignore)
 (show-paren-mode 1)
 
+;; replace selected text when you start typing
+(pending-delete-mode t)
+
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (require 'el-get)
 
@@ -50,7 +53,7 @@
        '(el-get switch-window vkill google-maps nxhtml xcscope color-theme 
                 anything python-mode pylookup linum-ex ack gist swank-clojure
                 clojure-mode deft markdown-mode auto-complete ac-slime auto-complete-css
-                auto-complete-emacs-lisp auto-complete-etags tail popup)
+                auto-complete-emacs-lisp auto-complete-etags tail popup ace-jump-mode)
        (mapcar 'el-get-source-name el-get-sources)))
 
 (el-get 'sync my-packages)
@@ -74,6 +77,11 @@
 (global-set-key (kbd "C-x C-f") 'find-file)
 (global-set-key (kbd "s-=") 'text-scale-increase)
 (global-set-key (kbd "s--") 'text-scale-decrease)
+(global-set-key (kbd "C-c SPC") 'ace-jump-mode)
+(global-set-key (kbd "C-u") 'pop-to-mark-command)
+
+(require 'key-chord)
+(key-chord-mode 1)
 
 ;; deft-mode configuration
 (require 'deft)
@@ -164,3 +172,53 @@
    t))
 
 (global-set-key (kbd "C-h !") 'prettify-json)
+
+
+(require 'thingatpt)
+(require 'imenu)
+
+(defun mine-goto-symbol-at-point ()
+  "Will navigate to the symbol at the current point of the cursor"
+  (interactive)
+  (ido-goto-symbol (thing-at-point 'symbol)))
+
+(defun ido-goto-symbol (&optional a-symbol)
+  "Will update the imenu index and then use ido to select a symbol to navigate to"
+  (interactive)
+  (imenu--make-index-alist)
+  (let ((name-and-pos '())
+        (symbol-names '()))
+    (flet ((addsymbols (symbol-list)
+                       (when (listp symbol-list)
+                         (dolist (symbol symbol-list)
+                           (let ((name nil) (position nil))
+                             (cond
+                              ((and (listp symbol) (imenu--subalist-p symbol))
+                               (addsymbols symbol))
+
+                              ((listp symbol)
+                               (setq name (car symbol))
+                               (setq position (cdr symbol)))
+
+                              ((stringp symbol)
+                               (setq name symbol)
+                               (setq position (get-text-property 1 'org-imenu-marker symbol))))
+
+                             (unless (or (null position) (null name))
+                               (add-to-list 'symbol-names name)
+                               (add-to-list 'name-and-pos (cons name position))))))))
+      (addsymbols imenu--index-alist))
+    (let* ((selected-symbol
+            (if (null a-symbol)
+                (ido-completing-read "Symbol? " symbol-names)
+              a-symbol))
+           (position (cdr (assoc selected-symbol name-and-pos))))
+      (cond
+       ((overlayp position)
+        (goto-char (overlay-start position)))
+       (t
+        (goto-char position))))))
+
+;; optionally bind these to key chords
+(key-chord-define-global "gs" 'ido-goto-symbol)
+(key-chord-define-global "gp" 'mine-goto-symbol-at-point)

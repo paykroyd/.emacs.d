@@ -27,7 +27,35 @@ front of `ac-sources' for the current buffer.
 
 ;;;***
 
-;;;### (autoloads (ack) "ack/ack" "ack/ack.el" (20485 62972))
+;;;### (autoloads (ace-jump-mode) "ace-jump-mode/ace-jump-mode" "ace-jump-mode/ace-jump-mode.el"
+;;;;;;  (20488 23040))
+;;; Generated autoloads from ace-jump-mode/ace-jump-mode.el
+
+(autoload 'ace-jump-mode "ace-jump-mode/ace-jump-mode" "\
+AceJump mode is a minor mode for you to quick jump to a
+position in the curret view.
+   There is three submode now:
+     `ace-jump-char-mode'
+     `ace-jump-word-mode'
+     `ace-jump-line-mode'
+
+You can specify the sequence about which mode should enter
+by customize `ace-jump-mode-submode-list'.
+
+If you do not want to query char for word mode, you can change
+`ace-jump-word-mode-use-query-char' to nil.
+
+If you don't like the default move keys, you can change it by
+setting `ace-jump-mode-move-keys'.
+
+You can constrol whether use the case sensitive via
+`ace-jump-mode-case-fold'.
+
+\(fn &optional PREFIX)" t nil)
+
+;;;***
+
+;;;### (autoloads (ack) "ack/ack" "ack/ack.el" (20488 18648))
 ;;; Generated autoloads from ack/ack.el
 
 (autoload 'ack "ack/ack" "\
@@ -1157,8 +1185,8 @@ Just some alien fruit salad to keep you in the zone.
 ;;;;;;  color-theme-compare color-theme-make-snapshot color-theme-analyze-defun
 ;;;;;;  color-theme-print color-theme-install-at-point-for-current-frame
 ;;;;;;  color-theme-install-at-mouse color-theme-describe color-theme-select)
-;;;;;;  "color-theme/color-theme" "color-theme/color-theme.el" (20181
-;;;;;;  27752))
+;;;;;;  "color-theme/color-theme" "color-theme/color-theme.el" (20488
+;;;;;;  18648))
 ;;; Generated autoloads from color-theme/color-theme.el
 
 (autoload 'color-theme-select "color-theme/color-theme" "\
@@ -1293,7 +1321,7 @@ Initialize the color theme package by loading color-theme-libraries.
 
 ;;;***
 
-;;;### (autoloads (deft) "deft/deft" "deft/deft.el" (20485 62973))
+;;;### (autoloads (deft) "deft/deft" "deft/deft.el" (20488 18648))
 ;;; Generated autoloads from deft/deft.el
 
 (autoload 'deft "deft/deft" "\
@@ -1417,7 +1445,7 @@ A major mode for Google Maps service
 ;;;***
 
 ;;;### (autoloads (global-linum-mode linum-mode linum-format) "linum-ex/linum-ex"
-;;;;;;  "linum-ex/linum-ex.el" (20485 62972))
+;;;;;;  "linum-ex/linum-ex.el" (20488 18648))
 ;;; Generated autoloads from linum-ex/linum-ex.el
 
 (defvar linum-format 'dynamic "\
@@ -1784,8 +1812,7 @@ TextMate Emulation Minor Mode
 ;;;;;;  "expand-region/org-mode-expansions.el" "expand-region/python-el-expansions.el"
 ;;;;;;  "expand-region/python-el-fgallina-expansions.el" "expand-region/python-mode-expansions.el"
 ;;;;;;  "expand-region/ruby-mode-expansions.el" "expand-region/text-mode-expansions.el"
-;;;;;;  "popup/popup-test.el" "popup/popup.el") (20488 18406 743126
-;;;;;;  0))
+;;;;;;  "popup/popup-test.el" "popup/popup.el") (20488 23041 645407))
 
 ;;;***
 
