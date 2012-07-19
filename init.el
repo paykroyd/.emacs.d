@@ -222,3 +222,4 @@
 ;; optionally bind these to key chords
 (key-chord-define-global "gs" 'ido-goto-symbol)
 (key-chord-define-global "gp" 'mine-goto-symbol-at-point)
+(key-chord-define-global "fd" 'ace-jump-mode)
