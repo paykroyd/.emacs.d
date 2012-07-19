@@ -1303,6 +1303,25 @@ Switch to *Deft* buffer and load files.
 
 ;;;***
 
+;;;### (autoloads (er/expand-region) "expand-region/expand-region-core"
+;;;;;;  "expand-region/expand-region-core.el" (20488 18402 0 0))
+;;; Generated autoloads from expand-region/expand-region-core.el
+
+(autoload 'er/expand-region "expand-region/expand-region-core" "\
+Increase selected region by semantic units.
+Basically it runs all the mark-functions in `er/try-expand-list'
+and chooses the one that increases the size of the region while
+moving point or mark as little as possible.
+
+With prefix argument expands the region that many times.
+If prefix argument is negative calls `er/contract-region'.
+If prefix argument is 0 it resets point and mark to their state
+before calling `er/expand-region' for the first time.
+
+\(fn ARG)" t nil)
+
+;;;***
+
 ;;;### (autoloads (gist-fetch gist-list gist-region-or-buffer-private
 ;;;;;;  gist-region-or-buffer gist-buffer-private gist-buffer gist-region-private
 ;;;;;;  gist-region) "gist/gist" "gist/gist.el" (20485 62972))
@@ -1755,8 +1774,18 @@ TextMate Emulation Minor Mode
 
 ;;;***
 
-;;;### (autoloads nil nil ("popup/popup-test.el" "popup/popup.el")
-;;;;;;  (20486 11057 753659))
+;;;### (autoloads nil nil ("expand-region/clojure-mode-expansions.el"
+;;;;;;  "expand-region/css-mode-expansions.el" "expand-region/erlang-mode-expansions.el"
+;;;;;;  "expand-region/expand-region-custom.el" "expand-region/expand-region-pkg.el"
+;;;;;;  "expand-region/expand-region.el" "expand-region/feature-mode-expansions.el"
+;;;;;;  "expand-region/html-mode-expansions.el" "expand-region/js-mode-expansions.el"
+;;;;;;  "expand-region/js2-mode-expansions.el" "expand-region/jsp-expansions.el"
+;;;;;;  "expand-region/latex-mode-expansions.el" "expand-region/nxml-mode-expansions.el"
+;;;;;;  "expand-region/org-mode-expansions.el" "expand-region/python-el-expansions.el"
+;;;;;;  "expand-region/python-el-fgallina-expansions.el" "expand-region/python-mode-expansions.el"
+;;;;;;  "expand-region/ruby-mode-expansions.el" "expand-region/text-mode-expansions.el"
+;;;;;;  "popup/popup-test.el" "popup/popup.el") (20488 18406 743126
+;;;;;;  0))
 
 ;;;***
 

@@ -31,6 +31,11 @@
 (setq el-get-sources
       '((:name magit
                :after (lambda () (global-set-key (kbd "C-x C-z") 'magit-status)))
+        (:name expand-region 
+               :type git
+               :url "git://github.com/magnars/expand-region.el.git"
+               :features expand-region
+               :after (lambda() (global-set-key (kbd "C-=") 'er/expand-region)))
 	(:name textmate 
 	       :type git 
 	       :url "git://github.com/defunkt/textmate.el.git"
@@ -38,6 +43,7 @@
 	       :compile "textmate.el"
 	       :after (lambda () (textmate-mode)))
         ))
+
 
 (setq my-packages
       (append
