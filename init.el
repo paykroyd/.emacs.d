@@ -39,6 +39,13 @@
                :url "git://github.com/magnars/expand-region.el.git"
                :features expand-region
                :after (lambda() (global-set-key (kbd "C-=") 'er/expand-region)))
+        (:name find-file-in-project 
+               :type git
+               :url "git://github.com/technomancy/find-file-in-project.git"
+               :features find-file-in-project
+               :after (lambda() (progn 
+                                  (setq ffip-patterns (append '("*.java") ffip-patterns))
+                                  (global-set-key (kbd "<C-return>") 'find-file-in-project))))
 	(:name textmate 
 	       :type git 
 	       :url "git://github.com/defunkt/textmate.el.git"
@@ -46,6 +53,7 @@
 	       :compile "textmate.el"
 	       :after (lambda () (textmate-mode)))
         ))
+
 
 
 (setq my-packages
@@ -78,7 +86,7 @@
 (global-set-key (kbd "s-=") 'text-scale-increase)
 (global-set-key (kbd "s--") 'text-scale-decrease)
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
-(global-set-key (kbd "C-u") 'pop-to-mark-command)
+(global-set-key (kbd "C-]") 'pop-to-mark-command)
 
 (require 'key-chord)
 (key-chord-mode 1)
@@ -223,3 +231,4 @@
 (key-chord-define-global "gs" 'ido-goto-symbol)
 (key-chord-define-global "gp" 'mine-goto-symbol-at-point)
 (key-chord-define-global "fd" 'ace-jump-mode)
+
