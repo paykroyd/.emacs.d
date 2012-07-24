@@ -81,6 +81,8 @@
           (lambda ()
 	    (linum-mode)))
 
+(add-hook 'java-mode-hook (lambda () (linum-mode)))
+
 (global-set-key (kbd "s-J") 'join-line)
 (global-set-key (kbd "C-x C-f") 'find-file)
 (global-set-key (kbd "s-=") 'text-scale-increase)
@@ -129,7 +131,7 @@
 (add-to-list 'tramp-default-proxies-alist
              '("log1" nil "/ssh:paykroyd@cc.springpadapp.com:"))
 (add-to-list 'tramp-default-proxies-alist
-             '("demo-social1" nil "/ssh:paykroyd@cc.springpadapp.com:"))
+             '("sbr9" nil "\\`spring\\'" "/ssh:ubuntu@sbr9" "\\`root\\'" "/ssh:paykroyd@cc.springpadapp.com:"))
 
 
 ;; eshell customizations
@@ -232,3 +234,4 @@
 (key-chord-define-global "gp" 'mine-goto-symbol-at-point)
 (key-chord-define-global "fd" 'ace-jump-mode)
 
+(require 'xcscope)
