@@ -23,7 +23,7 @@
 
 (setq ring-bell-function 'ignore)
 (show-paren-mode 1)
-
+(setq hl-line-sticky-flag nil)
 ;; replace selected text when you start typing
 (pending-delete-mode t)
 
@@ -45,7 +45,7 @@
                :features find-file-in-project
                :after (lambda() (progn 
                                   (setq ffip-patterns (append '("*.java") ffip-patterns))
-                                  (global-set-key (kbd "<C-return>") 'find-file-in-project))))
+                                  (global-set-key (kbd "<s-tab>") 'find-file-in-project))))
 	(:name textmate 
 	       :type git 
 	       :url "git://github.com/defunkt/textmate.el.git"
@@ -61,7 +61,8 @@
        '(el-get switch-window vkill google-maps nxhtml xcscope color-theme 
                 anything python-mode pylookup linum-ex ack gist swank-clojure
                 clojure-mode deft markdown-mode auto-complete ac-slime auto-complete-css
-                auto-complete-emacs-lisp auto-complete-etags tail popup ace-jump-mode)
+                auto-complete-emacs-lisp auto-complete-etags tail popup ace-jump-mode
+                color-theme-solarized)
        (mapcar 'el-get-source-name el-get-sources)))
 
 (el-get 'sync my-packages)
@@ -89,6 +90,10 @@
 (global-set-key (kbd "s--") 'text-scale-decrease)
 (global-set-key (kbd "C-c SPC") 'ace-jump-mode)
 (global-set-key (kbd "C-]") 'pop-to-mark-command)
+
+;; code navigation shortcuts
+;; (global-set-key (kbd "M-.") 'cscope-find-this-symbol)
+;; (global-set-key (kbd "M-<f7>") 'cscope-find-functions-calling-this-function)
 
 (require 'key-chord)
 (key-chord-mode 1)
@@ -234,4 +239,4 @@
 (key-chord-define-global "gp" 'mine-goto-symbol-at-point)
 (key-chord-define-global "fd" 'ace-jump-mode)
 
-(require 'xcscope)
+
