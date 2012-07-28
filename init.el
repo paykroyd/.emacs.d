@@ -23,7 +23,7 @@
 
 (setq ring-bell-function 'ignore)
 (show-paren-mode 1)
-(setq hl-line-sticky-flag nil)
+(global-hl-line-mode)
 ;; replace selected text when you start typing
 (pending-delete-mode t)
 
