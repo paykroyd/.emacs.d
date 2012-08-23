@@ -72,18 +72,29 @@
 (autoload 'python-mode "python-mode" "Python editing mode." t)
 
 (add-to-list 'load-path "~/.emacs.d/vendor")
-(setq-default py-python-command-args '("--pylab" "--colors=Linux"))
+;; (setq-default py-python-command-args '("--pylab" "--colors=Linux"))
 (setq-default py-indent-offset 2)
 (setq-default indent-tabs-mode nil)
-(setq-default py-python-command "/usr/local/share/python/ipython")
+;; (setq-default py-python-command "/usr/local/share/python/ipython")
 
-(require 'ipython)
+;; (require 'ipython)
 (add-hook 'python-mode-hook
           (lambda ()
 	    (linum-mode)))
 
+;; Java config
 (add-hook 'java-mode-hook (lambda () (linum-mode)))
+(add-to-list 'load-path "~/.emacs.d/vendor/malabar-mode/src/main/lisp")
+(setq semantic-default-submodes '(global-semantic-idle-scheduler-mode
+                                  global-semanticdb-minor-mode
+                                  global-semantic-idle-summary-mode
+                                  global-semantic-mru-bookmark-mode))
+(semantic-mode 1)
+(require 'malabar-mode)
+(setq malabar-groovy-lib-dir "~/.emacs.d/vendor/malabar-mode/target")
+(add-to-list 'auto-mode-alist '("\\.java\\'" . malabar-mode))
 
+;; Javascript config
 (add-to-list 'load-path "~/.emacs.d/vendor/js2-mode")
 (autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
