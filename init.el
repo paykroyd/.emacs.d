@@ -1,3 +1,6 @@
+(add-to-list 'exec-path "/usr/local/bin")
+(add-to-list 'exec-path "/usr/local/share/python/")
+
 (setq is-gui (fboundp 'tool-bar-mode))
 
 (if is-gui
@@ -12,8 +15,6 @@
 
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 
-(add-to-list 'exec-path "/usr/local/bin")
-(add-to-list 'exec-path "/usr/local/share/python/")
 
 (if is-gui (set-default-font "-apple-Menlo-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1"))
 
@@ -26,6 +27,14 @@
 (global-hl-line-mode)
 ;; replace selected text when you start typing
 (pending-delete-mode t)
+
+(require 'package)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+(when (not (package-installed-p 'nrepl))
+  (package-install 'nrepl))
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (require 'el-get)
@@ -76,6 +85,9 @@
 (setq-default py-indent-offset 2)
 (setq-default indent-tabs-mode nil)
 ;; (setq-default py-python-command "/usr/local/share/python/ipython")
+
+;; clojure
+(defvar nrepl-lein-command "/usr/local/bin/lein")
 
 ;; (require 'ipython)
 (add-hook 'python-mode-hook
