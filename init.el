@@ -2,29 +2,14 @@
 (add-to-list 'exec-path "/usr/local/share/python/")
 
 (setq is-gui (fboundp 'tool-bar-mode))
-
-(if is-gui
-    (progn
-      ;; slime
-      (eval-after-load "slime" 
-        '(progn (slime-setup '(slime-repl))))
-
-      (add-to-list 'load-path "~/.emacs.d/slime")
-      (require 'slime)
-      (slime-setup)))
-
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-
-
 (if is-gui (set-default-font "-apple-Menlo-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1"))
 
-;; this is no good in the terminal
-;;(normal-erase-is-backspace-mode 1)
-;;(delete-selection-mode 1)
 
 (setq ring-bell-function 'ignore)
 (show-paren-mode 1)
 (global-hl-line-mode)
+
 ;; replace selected text when you start typing
 (pending-delete-mode t)
 
@@ -96,15 +81,6 @@
 
 ;; Java config
 (add-hook 'java-mode-hook (lambda () (linum-mode)))
-(add-to-list 'load-path "~/.emacs.d/vendor/malabar-mode/src/main/lisp")
-(setq semantic-default-submodes '(global-semantic-idle-scheduler-mode
-                                  global-semanticdb-minor-mode
-                                  global-semantic-idle-summary-mode
-                                  global-semantic-mru-bookmark-mode))
-(semantic-mode 1)
-(require 'malabar-mode)
-(setq malabar-groovy-lib-dir "~/.emacs.d/vendor/malabar-mode/target")
-(add-to-list 'auto-mode-alist '("\\.java\\'" . malabar-mode))
 
 ;; Javascript config
 (add-to-list 'load-path "~/.emacs.d/vendor/js2-mode")

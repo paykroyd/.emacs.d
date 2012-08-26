@@ -1170,6 +1170,37 @@ Major mode for ClojureScript
 
 ;;;***
 
+;;;### (autoloads (color-theme-solarized-light color-theme-solarized-dark
+;;;;;;  color-theme-solarized) "color-theme-solarized/color-theme-solarized"
+;;;;;;  "color-theme-solarized/color-theme-solarized.el" (20500 15481))
+;;; Generated autoloads from color-theme-solarized/color-theme-solarized.el
+
+(autoload 'color-theme-solarized "color-theme-solarized/color-theme-solarized" "\
+Color theme by Ethan Schoonover, created 2011-03-24.
+Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized.
+
+\(fn MODE)" t nil)
+
+(autoload 'color-theme-solarized-dark "color-theme-solarized/color-theme-solarized" "\
+
+
+\(fn)" t nil)
+
+(autoload 'color-theme-solarized-light "color-theme-solarized/color-theme-solarized" "\
+
+
+\(fn)" t nil)
+
+;;;***
+
+;;;### (autoloads nil "color-theme-solarized/solarized-definitions"
+;;;;;;  "color-theme-solarized/solarized-definitions.el" (20500 15481))
+;;; Generated autoloads from color-theme-solarized/solarized-definitions.el
+
+(when (boundp 'custom-theme-load-path) (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
+
+;;;***
+
 ;;;### (autoloads (color-theme-zenburn) "color-theme-zenburn/zenburn"
 ;;;;;;  "color-theme-zenburn/zenburn.el" (20181 27755))
 ;;; Generated autoloads from color-theme-zenburn/zenburn.el
@@ -1347,6 +1378,35 @@ If prefix argument is 0 it resets point and mark to their state
 before calling `er/expand-region' for the first time.
 
 \(fn ARG)" t nil)
+
+;;;***
+
+;;;### (autoloads (find-file-in-project) "find-file-in-project/find-file-in-project"
+;;;;;;  "find-file-in-project/find-file-in-project.el" (20489 46270))
+;;; Generated autoloads from find-file-in-project/find-file-in-project.el
+
+(autoload 'find-file-in-project "find-file-in-project/find-file-in-project" "\
+Prompt with a completing list of all files in the project to find one.
+
+The project's scope is defined as the first directory containing
+an `.emacs-project' file.  You can override this by locally
+setting the variable `ffip-project-root'.
+
+\(fn)" t nil)
+
+(defalias 'ffip 'find-file-in-project)
+
+(put 'ffip-patterns 'safe-local-variable 'listp)
+
+(put 'ffip-find-options 'safe-local-variable 'stringp)
+
+(put 'ffip-project-file 'safe-local-variable 'stringp)
+
+(put 'ffip-project-root 'safe-local-variable 'stringp)
+
+(put 'ffip-project-root-function 'safe-local-variable 'functionp)
+
+(put 'ffip-limit 'safe-local-variable 'integerp)
 
 ;;;***
 
@@ -1802,17 +1862,19 @@ TextMate Emulation Minor Mode
 
 ;;;***
 
-;;;### (autoloads nil nil ("expand-region/clojure-mode-expansions.el"
-;;;;;;  "expand-region/css-mode-expansions.el" "expand-region/erlang-mode-expansions.el"
-;;;;;;  "expand-region/expand-region-custom.el" "expand-region/expand-region-pkg.el"
-;;;;;;  "expand-region/expand-region.el" "expand-region/feature-mode-expansions.el"
-;;;;;;  "expand-region/html-mode-expansions.el" "expand-region/js-mode-expansions.el"
-;;;;;;  "expand-region/js2-mode-expansions.el" "expand-region/jsp-expansions.el"
-;;;;;;  "expand-region/latex-mode-expansions.el" "expand-region/nxml-mode-expansions.el"
-;;;;;;  "expand-region/org-mode-expansions.el" "expand-region/python-el-expansions.el"
-;;;;;;  "expand-region/python-el-fgallina-expansions.el" "expand-region/python-mode-expansions.el"
-;;;;;;  "expand-region/ruby-mode-expansions.el" "expand-region/text-mode-expansions.el"
-;;;;;;  "popup/popup-test.el" "popup/popup.el") (20488 23041 645407))
+;;;### (autoloads nil nil ("color-theme-solarized/color-theme-solarized-pkg.el"
+;;;;;;  "color-theme-solarized/solarized-dark-theme.el" "color-theme-solarized/solarized-light-theme.el"
+;;;;;;  "expand-region/clojure-mode-expansions.el" "expand-region/css-mode-expansions.el"
+;;;;;;  "expand-region/erlang-mode-expansions.el" "expand-region/expand-region-custom.el"
+;;;;;;  "expand-region/expand-region-pkg.el" "expand-region/expand-region.el"
+;;;;;;  "expand-region/feature-mode-expansions.el" "expand-region/html-mode-expansions.el"
+;;;;;;  "expand-region/js-mode-expansions.el" "expand-region/js2-mode-expansions.el"
+;;;;;;  "expand-region/jsp-expansions.el" "expand-region/latex-mode-expansions.el"
+;;;;;;  "expand-region/nxml-mode-expansions.el" "expand-region/org-mode-expansions.el"
+;;;;;;  "expand-region/python-el-expansions.el" "expand-region/python-el-fgallina-expansions.el"
+;;;;;;  "expand-region/python-mode-expansions.el" "expand-region/ruby-mode-expansions.el"
+;;;;;;  "expand-region/text-mode-expansions.el" "popup/popup-test.el"
+;;;;;;  "popup/popup.el") (20500 15482 646144))
 
 ;;;***
 
